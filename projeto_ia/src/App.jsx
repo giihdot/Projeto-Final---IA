@@ -5,7 +5,7 @@ import Apresentacao from "./pages/Apresentacao";
 import Professora from "./pages/SobreProfessora";
 import Calendario from "./pages/Calendario";
 import Depoimentos from "./pages/Depoimentos";
-import Colabore from "./pages/SobreNos";
+import Colaboradoras from "./pages/SobreNos";
 
 export default function AppRoutes() {
   return (
@@ -16,7 +16,7 @@ export default function AppRoutes() {
         <Route path="/professora" element={<Professora />} />
         <Route path="/calendario" element={<Calendario />} />
         <Route path="/depoimentos" element={<Depoimentos />} />
-        <Route path="/asgatitas" element={<Colabore />} />
+        <Route path="/asgatitas" element={<Colaboradoras />} />
       </Routes>
     </BrowserRouter>
   );
