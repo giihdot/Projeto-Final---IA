@@ -1,0 +1,84 @@
+/* NAVBAR GERAL */
+.navbar {
+  width: 100%;
+  height: 70px;
+  padding: 0 40px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-family: 'Inter', sans-serif;
+}
+
+/* LOGO */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-box {
+  width: 32px;
+  height: 32px;
+  background: #ff69b4;
+  color: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.logo-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.logo-text span {
+  color: #ff69b4;
+}
+
+/* LINKS */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+}
+
+.navbar-links li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #444;
+  padding: 8px 14px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.navbar-links li i {
+  color: #ff69b4;
+  font-size: 14px;
+}
+
+/* LINK ATIVO (Início) */
+.navbar-links .active {
+  background: #ffe2ef;
+  font-weight: 600;
+  color: #ff69b4;
+}
+
+/* HOVER */
+.navbar-links li:hover {
+  background: #f7f7f7;
+}
+
+/* BOTÃO IA */
+.btn-ia {
+  background: #000;
+  color: white
+}
