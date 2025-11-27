@@ -1,11 +1,19 @@
 import "./SobreNos.css";
-import Julia from '../assets/Julia.jpeg';
-import Giovanna from '../assets/Giovanna.jpeg';
-import Duarte from '../assets/Duarte.jpeg';
-import Kamilly from '../assets/Kamilly.jpeg';
+import Giovanna from "../assets/Giovanna.jpeg";
+import Julia from "../assets/Julia.jpeg";
+import Kamilly from "../assets/Kamilly.jpeg";
+import Duarte from "../assets/Duarte.jpeg";
 import Footer from "../components/Footer";
 
+export default function Team() {
+  const people = [
+    { name: "Giovanna Ferreira", image: Giovanna},
+    { name: "Julia Piazzoli Domeneghhetti", image: Julia},
+    { name: "Kamilly Barra", image: Kamilly},
+    { name: "Maria Clara Duarte", image: Duarte},
+  ];
 
+<<<<<<< HEAD
 
 const integrantes = [
   {
@@ -55,16 +63,19 @@ function Us() {
       <br/>
         <br/>
       <h2 className="nome">{pessoa.nome}</h2>
+=======
+  return (
+    <div className="team-container">
+      {people.map((p, i) => (
+        <div className="team-card" key={i}>
+          <div className="photo-wrapper">
+            <img src={p.photo} alt={p.name} className="photo" />
+          </div>
+          <p className="team-name">{p.name}</p>
+        </div>
+      ))}
+      <Footer />
+>>>>>>> f1a5fdd447a975542098f9165621e4e37bcc6dae
     </div>
-        ))}
-
-        <br />
-
-      </div>
-    </div>
-    <Footer />
-    </>
   );
 }
-
-export default Us
