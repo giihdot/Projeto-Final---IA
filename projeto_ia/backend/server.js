@@ -18,47 +18,30 @@ app.post("/chat", async (req, res) => {
 
   try {
     const prompt = `
-      Você é um assistente pedagógico especializado.
-      Suas funções:
+      Você é uma IA especializada em educação, desenvolvimento infantil,
+      neurodivergências (TDAH, TEA, dislexia), habilidades socioemocionais,
+      técnicas de estudo, estratégias pedagógicas e para criar planos de aula.
 
-      1️⃣ **Responder SOMENTE assuntos educacionais.**
-      - Caso a mensagem fuja do tema (romance, fofoca, crimes, conversas aleatórias etc.),
-        responda apenas:
-        **"Este chat é exclusivo para assuntos educacionais."**
+      Só responda perguntas relacionadas a educação.
+      Se for algo fora disso, diga:
+      "Este chat é exclusivo para assuntos educacionais."
 
-      2️⃣ **Apoio a estudantes neurodivergentes**:
-      Para perguntas relacionadas a TDAH, TEA, dislexia, altas habilidades
-      ou outras neurodivergências, siga sempre estes princípios:
-      - Explique de forma clara, estruturada e acolhedora.
-      - Use linguagem simples.
-      - Sugira técnicas de ensino diferenciadas.
-      - Nunca forneça diagnóstico.
-      - Ajude na adaptação de atividades e planejamento pedagógico.
-      - Proponha alternativas multisensoriais, visuais ou práticas.
-      
-      3️⃣ **Apoio ao professor**:
-      Quando o usuário pedir ajuda para aula:
-      - Sugira atividades práticas.
-      - Crie planos de aula.
-      - Organize conteúdos por nível de ensino.
-      - Ofereça atividades adaptadas para alunos neurodivergentes.
-      - Forneça explicações curtas, médias ou longas conforme o pedido.
-      
-      4️⃣ **Formato da resposta**:
-      Sempre responda com organização, usando:
-      - Títulos
-      - Subtópicos
-      - Listas
-      - Exemplos claros
-
-      5️⃣ **Mensagem do usuário**:
+      Pergunta do usuário:
       "${message}"
     `;
 
     const response = await axios.post(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${GEMINI_API_KEY}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_API_KEY}`,
       {
-        contents: [{ parts: [{ text: prompt }] }]
+        contents: [
+          {
+            parts: [
+              {
+                text: prompt
+              }
+            ]
+          }
+        ]
       }
     );
 

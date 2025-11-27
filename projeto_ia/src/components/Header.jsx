@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 export default function Header() {
@@ -14,13 +14,17 @@ export default function Header() {
         </p>
 
         <div className="hero-buttons">
-          <button className="btn-ia">
-            <i className="fas fa-bolt"></i> Pergunte para a IA
-          </button>
 
-          <button className="btn-prof">
+          {/* Botão IA */}
+          <Link to="/ia" className="btn-ia">
+            <i className="fas fa-bolt"></i> Pergunte para a IA
+          </Link>
+
+          {/* Botão Professora */}
+          <Link to="/professora" className="btn-prof">
             Conheça a Professora
-          </button>
+          </Link>
+
         </div>
       </div>
     </header>

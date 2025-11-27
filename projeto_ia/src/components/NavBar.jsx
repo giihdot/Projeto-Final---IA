@@ -5,7 +5,6 @@ import "./NavBar.css";
 export default function NavBar() {
   return (
     <nav className="navbar">
-      
       {/* LOGO */}
       <div className="navbar-logo">
         <div className="logo-box">GC</div>
@@ -47,11 +46,10 @@ export default function NavBar() {
         </li>
       </ul>
 
-      {/* BOTÃO IA */}
-      <button className="ia-btn">
+      <Link to="/ia" className="ia-btn">
         <i className="fas fa-bolt"></i>
         IA Especialista
-      </button>
+      </Link>
     </nav>
   );
 }
